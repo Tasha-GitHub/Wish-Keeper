@@ -23,10 +23,10 @@ if(process.env.JAWSDB_URL){
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 }else{
   connection = mysql.createConnection({
-  host: passKey.host,
-  user: passKey.user,
-  password: passKey.password,
-  database: passKey.database
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "wish_saver_db"
 });
 
 } 
