@@ -1,6 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
-var passKey = require(keys.js);
+var passKey = require("./keys.js");
 
 var app = express();
 var port = 3000;
@@ -23,10 +23,10 @@ if(process.env.JAWSDB_URL){
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 }else{
   connection = mysql.createConnection({
-  host: passKey.keys.host,
-  user: passKey.keys.user,
-  password: passKey.keys.password,
-  database: passKey.keys.database
+  host: passKey.host,
+  user: passKey.user,
+  password: passKey.password,
+  database: passKey.database
 });
 
 } 
